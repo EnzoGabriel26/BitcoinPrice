@@ -13,6 +13,9 @@
 		C6C91D1D2AABE9A60082FD5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C91D1B2AABE9A60082FD5B /* Main.storyboard */; };
 		C6C91D1F2AABE9A80082FD5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C91D1E2AABE9A70082FD5B /* Assets.xcassets */; };
 		C6C91D222AABE9A80082FD5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C91D202AABE9A80082FD5B /* LaunchScreen.storyboard */; };
+		C6C91D2D2AABEC890082FD5B /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C91D2A2AABEC890082FD5B /* CoinModel.swift */; };
+		C6C91D2E2AABEC890082FD5B /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C91D2B2AABEC890082FD5B /* CoinManager.swift */; };
+		C6C91D2F2AABEC890082FD5B /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C91D2C2AABEC890082FD5B /* CoinData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		C6C91D1E2AABE9A70082FD5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6C91D212AABE9A80082FD5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6C91D232AABE9A80082FD5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6C91D2A2AABEC890082FD5B /* CoinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		C6C91D2B2AABEC890082FD5B /* CoinManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
+		C6C91D2C2AABEC890082FD5B /* CoinData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,40 @@
 			children = (
 				C6C91D152AABE9A60082FD5B /* AppDelegate.swift */,
 				C6C91D172AABE9A60082FD5B /* SceneDelegate.swift */,
-				C6C91D192AABE9A60082FD5B /* ViewController.swift */,
-				C6C91D1B2AABE9A60082FD5B /* Main.storyboard */,
+				C6C91D302AABECA80082FD5B /* Controller */,
+				C6C91D312AABECBE0082FD5B /* View */,
 				C6C91D1E2AABE9A70082FD5B /* Assets.xcassets */,
 				C6C91D202AABE9A80082FD5B /* LaunchScreen.storyboard */,
 				C6C91D232AABE9A80082FD5B /* Info.plist */,
+				C6C91D292AABEC890082FD5B /* Model */,
 			);
 			path = BitcoinPrice;
+			sourceTree = "<group>";
+		};
+		C6C91D292AABEC890082FD5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6C91D2A2AABEC890082FD5B /* CoinModel.swift */,
+				C6C91D2B2AABEC890082FD5B /* CoinManager.swift */,
+				C6C91D2C2AABEC890082FD5B /* CoinData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C6C91D302AABECA80082FD5B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C6C91D192AABE9A60082FD5B /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C6C91D312AABECBE0082FD5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6C91D1B2AABE9A60082FD5B /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C91D2F2AABEC890082FD5B /* CoinData.swift in Sources */,
+				C6C91D2D2AABEC890082FD5B /* CoinModel.swift in Sources */,
 				C6C91D1A2AABE9A60082FD5B /* ViewController.swift in Sources */,
 				C6C91D162AABE9A60082FD5B /* AppDelegate.swift in Sources */,
 				C6C91D182AABE9A60082FD5B /* SceneDelegate.swift in Sources */,
+				C6C91D2E2AABEC890082FD5B /* CoinManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +326,7 @@
 				DEVELOPMENT_TEAM = MQB8N932K2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BitcoinPrice/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BitcoinPrice;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,6 +355,7 @@
 				DEVELOPMENT_TEAM = MQB8N932K2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BitcoinPrice/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BitcoinPrice;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -1,13 +1,8 @@
-//
 //  AppDelegate.swift
-//  BitcoinPrice
-//
-//  Created by Enzo Oliveira on 08/09/23.
-//
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
